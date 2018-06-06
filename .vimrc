@@ -9,14 +9,18 @@ Plug 'aaronbieber/vim-quicktask'
 Plug 'reedes/vim-wordy'
 call plug#end()
 
+set t_Co=256
 set background=dark
-colorscheme gruvbox
+colorscheme grb256
 
 filetype plugin indent on
 syntax on
-set backspace=2
+set dictionary+=/usr/share/dict/web2
+set completeopt=longest,menuone
+set backspace=2 
 set autoindent
 set display=lastline
+set noswapfile
 set wildmenu
 set wildmode=longest:full,full
 set showcmd
@@ -49,6 +53,7 @@ nnoremap <leader><space> :noh<cr>
 nnoremap <leader>w <C-w>v<C-w>
 "disable arrow keys
 noremap <up> <nop>
+"set ,n to switch to dictionary completion mode
 nnoremap <down> <nop>
 nnoremap <left> <nop>
 nnoremap <right> <nop>
